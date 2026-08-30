@@ -1,0 +1,6 @@
+{
+  "name": "Paula Negrão | Imóveis de Alto Padrão - Praia do Francês e Litoral Sul de Alagoas",
+  "description": "Imóveis de alto padrão, casas de luxo e terrenos em condomínios fechados (Laguna, Granville, Atlantis) na Praia do Francês e Litoral Sul de Alagoas com a especialista Paula Negrão (CRECI-AL 5494).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
