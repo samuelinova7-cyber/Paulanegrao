@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
-import { CONDOMINIUMS, Condominium } from '../data/condominiums';
+import { CONDOMINIUMS } from '../data/condominiums';
 import { 
-  ShieldCheck, 
+  Waves, 
   Anchor, 
   MapPin, 
-  Trees, 
-  Waves, 
-  Sparkles, 
   Check, 
   MessageCircle, 
-  ArrowRight,
-  ChevronRight
+  ChevronRight,
+  ChevronLeft
 } from 'lucide-react';
 
 interface CondominiumsSectionProps {
@@ -19,8 +16,23 @@ interface CondominiumsSectionProps {
 
 export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSelectCondoFilter }) => {
   const [selectedCondoId, setSelectedCondoId] = useState<string>('laguna');
+  const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
 
   const selectedCondo = CONDOMINIUMS.find(c => c.id === selectedCondoId) || CONDOMINIUMS[0];
+  const allImages = [selectedCondo.heroImage, ...(selectedCondo.gallery || [])];
+
+  const handlePrevImage = () => {
+    setActiveImageIndex((prev) => (prev - 1 + allImages.length) % allImages.length);
+  };
+
+  const handleNextImage = () => {
+    setActiveImageIndex((prev) => (prev + 1) % allImages.length);
+  };
+
+  const handleSelectTab = (id: string) => {
+    setSelectedCondoId(id);
+    setActiveImageIndex(0);
+  };
 
   const handleWhatsAppCondo = (condoName: string) => {
     const text = encodeURIComponent(`Olá Paula Negrão, tenho interesse em conhecer os imóveis e lotes disponíveis no ${condoName}. Poderia me enviar mais informações?`);
@@ -85,7 +97,7 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
           {CONDOMINIUMS.map((condo) => (
             <button
               key={condo.id}
-              onClick={() => setSelectedCondoId(condo.id)}
+              onClick={() => handleSelectTab(condo.id)}
               className={`px-6 py-3 text-xs tracking-[0.15em] uppercase font-semibold transition-all duration-200 border ${
                 selectedCondoId === condo.id
                   ? 'bg-[#1A1A1A] text-white border-black shadow-md'
@@ -100,32 +112,64 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
         {/* Selected Condo Showcase Card */}
         <div className="bg-white border border-black/10 shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           
-          {/* Left Visual Gallery */}
-          <div className="lg:col-span-6 relative min-h-[360px] lg:min-h-full">
-            <img
-              src={selectedCondo.heroImage}
-              alt={selectedCondo.name}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+          {/* Left Visual Gallery with Carousel Controls */}
+          <div className="lg:col-span-6 relative min-h-[420px] lg:min-h-full flex flex-col justify-between bg-black">
+            <div className="absolute inset-0">
+              <img
+                src={allImages[activeImageIndex % allImages.length]}
+                alt={selectedCondo.name}
+                className="w-full h-full object-cover transition-opacity duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            </div>
             
-            {/* Top Badge */}
-            <div className="absolute top-6 left-6">
+            {/* Top Badge & Image Counter */}
+            <div className="relative z-10 p-6 flex items-center justify-between">
               <span className="bg-[#D4AF37] text-white text-[10px] tracking-[0.2em] uppercase font-bold px-3.5 py-1.5 shadow-sm">
                 {selectedCondo.highlightBadge}
               </span>
+              <span className="bg-black/60 text-white/90 text-[10px] px-3 py-1 tracking-widest uppercase backdrop-blur-sm border border-white/20">
+                Foto {activeImageIndex + 1} de {allImages.length}
+              </span>
             </div>
 
-            {/* Bottom Caption */}
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <div className="flex items-center gap-2 text-xs text-[#D4AF37] font-medium mb-1">
+            {/* Middle Arrows for Carousel */}
+            <div className="relative z-10 flex items-center justify-between px-4 my-auto">
+              <button
+                onClick={handlePrevImage}
+                className="p-2.5 bg-black/60 hover:bg-[#D4AF37] hover:text-[#1A1A1A] text-white rounded-full transition-all border border-white/20"
+                aria-label="Foto anterior"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={handleNextImage}
+                className="p-2.5 bg-black/60 hover:bg-[#D4AF37] hover:text-[#1A1A1A] text-white rounded-full transition-all border border-white/20"
+                aria-label="Próxima foto"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Bottom Caption & Dots */}
+            <div className="relative z-10 p-6 text-white space-y-3">
+              <div className="flex items-center gap-2 text-xs text-[#D4AF37] font-medium">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>{selectedCondo.location}</span>
               </div>
-              <div className="flex items-center gap-4 text-[11px] text-white/80">
-                <span>{selectedCondo.distanceFrances}</span>
-                <span>•</span>
-                <span>{selectedCondo.distanceMaceio}</span>
+
+              {/* Dots */}
+              <div className="flex items-center gap-1.5 pt-1">
+                {allImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveImageIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all ${
+                      activeImageIndex === idx ? 'bg-[#D4AF37] w-6' : 'bg-white/40 hover:bg-white/70 w-2'
+                    }`}
+                    aria-label={`Ir para foto ${idx + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -135,7 +179,7 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-[10px] uppercase tracking-[0.25em] text-[#8C7326] font-semibold">
-                  Perfil do Condomínio
+                  Perfil em Destaque
                 </span>
                 <span className="text-[9px] uppercase tracking-widest text-[#7A7570] font-medium">
                   CRECI-AL 5494
@@ -177,10 +221,10 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
               {/* Amenities List */}
               <div className="mb-8">
                 <span className="text-[10px] uppercase tracking-wider text-[#1A1A1A] font-semibold block mb-2.5">
-                  Itens de Bem-Estar & Infraestrutura:
+                  Itens de Destaque & Conforto:
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {selectedCondo.amenities.slice(0, 4).map((amenity, idx) => (
+                  {selectedCondo.amenities.map((amenity, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-[11px] text-[#5A5550]">
                       <Check className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
                       <span>{amenity}</span>
@@ -196,7 +240,7 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
                 onClick={() => onSelectCondoFilter(selectedCondo.name.includes('Laguna') ? 'Laguna' : selectedCondo.name.includes('Granville') ? 'Granville' : 'Atlantis')}
                 className="flex-1 bg-[#1A1A1A] text-white hover:bg-black py-3 px-4 text-[10px] tracking-[0.2em] uppercase font-semibold text-center transition-all flex items-center justify-center gap-2"
               >
-                <span>Ver Imóveis Disponíveis</span>
+                <span>Ver Portfólio Completo</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </button>
 
@@ -205,7 +249,7 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
                 className="border border-[#D4AF37] text-[#8C7326] hover:bg-[#D4AF37] hover:text-white py-3 px-4 text-[10px] tracking-[0.2em] uppercase font-semibold text-center transition-all flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
-                <span>Consultar Lotes & Casas</span>
+                <span>Conversar no WhatsApp</span>
               </button>
             </div>
 
@@ -217,3 +261,4 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
     </section>
   );
 };
+

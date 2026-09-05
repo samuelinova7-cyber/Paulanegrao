@@ -51,31 +51,38 @@ export const CONDOMINIUMS: Condominium[] = [
   },
   {
     id: 'granville',
-    name: 'Condomínio Granville',
-    subtitle: 'Charme, sofisticação e exuberante bosque tropical a minutos do mar',
-    highlightBadge: 'Elegância & Natureza',
-    description: 'Um condomínio boutique caracterizado por sua atmosfera serena, alamedas arborizadas com espécies nativas da Mata Atlântica e casas com projetos de integração total entre interior e paisagismo. Perfeito para famílias que valorizam tranquilidade, privacidade e bem-estar.',
-    keyExpertise: 'Assessoria completa na aquisição de terrenos com topografia favorável e casas térreas e duplex de alto padrão construtivo.',
-    location: 'Praia do Francês, Alagoas',
+    name: 'Casa À Venda | Granville',
+    subtitle: 'Exclusividade e sofisticação em um dos condomínios mais desejados da região',
+    highlightBadge: 'Destaque Exclusivo Granville',
+    description: 'Casa à venda no Condomínio Granville com 450 m² de área construída em terreno de 1.114 m². 4 suítes, home office, dependência completa, salas amplas e integradas, piscina com 11,5m x 3m e espaço ideal para viver e receber com conforto. Tudo isso em um condomínio com excelente estrutura, segurança, lazer e localização privilegiada.',
+    keyExpertise: 'Paula Negrão destaca esta mansão como uma das melhores oportunidades para quem valoriza espaço, exclusividade e a experiência de morar bem no Granville.',
+    location: 'Condomínio Granville, Praia do Francês, Alagoas',
     distanceFrances: '3 min da Praia do Francês',
     distanceMaceio: '20 min de Maceió',
     amenities: [
-      'Bosque preservado com trilhas de caminhada ecológicas',
-      'Clubhouse social com espaço gourmet e lounge',
-      'Quadra poliesportiva e campo society com grama natural',
-      'Playground lúdico integrado à natureza',
-      'Portaria 24 horas com clausura de segurança e monitoramento perimetral'
+      'Piscina privativa com 11,5m x 3m',
+      'Home office reservado e silencioso',
+      'Dependência completa de empregada',
+      'Salas amplas e integradas em múltiplos ambientes',
+      'Terreno generoso de 1.114 m² com paisagismo',
+      'Segurança armada 24h e portaria blindada'
     ],
     specs: [
-      { label: 'Perfil dos Lotes', value: '450m² a 800m²' },
-      { label: 'Estilo Arquitetônico', value: 'Biofílico, Rústico Chic e Contemporâneo' },
-      { label: 'Segurança', value: 'Portaria 24h + Cerca Elétrica & Câmeras Térmicas' },
-      { label: 'Ambiente', value: 'Estritamente residencial de baixa densidade' }
+      { label: 'Área Construída', value: '450 m²' },
+      { label: 'Terreno', value: '1.114 m²' },
+      { label: 'Suítes', value: '4 Suítes completas' },
+      { label: 'Investimento', value: 'R$ 2.450.000,00 (Condomínio: R$ 986,37)' }
     ],
-    heroImage: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
+    heroImage: 'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618076/SnapInsta.to_788172183_18192296329386309_8859033092567156432_n_zrcjie.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?q=80&w=1000&auto=format&fit=crop'
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618075/SnapInsta.to_788384239_18192296257386309_1726130656819443439_n_hafoky.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618074/SnapInsta.to_787507040_18192296305386309_5496827554038165257_n_yunyzb.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618074/SnapInsta.to_787022144_18192296353386309_5263918383242873688_n_qmy5ud.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618071/SnapInsta.to_788304592_18192296509386309_2749884179022671611_n_dyydxd.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618071/SnapInsta.to_788073399_18192296485386309_3764493367527717089_n_bgf212.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618071/SnapInsta.to_787698416_18192296494386309_4640847425558260497_n_pxbnyr.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618071/SnapInsta.to_787760856_18192296524386309_2791263078630320410_n_dqzeku.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618072/SnapInsta.to_787083084_18192296338386309_1436075907121256568_n_cxafs7.jpg'
     ]
   },
   {

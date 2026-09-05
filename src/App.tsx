@@ -4,6 +4,9 @@ import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { CondominiumsSection } from './components/CondominiumsSection';
 import { PortfolioSection } from './components/PortfolioSection';
+import { ExclusiveTourSection } from './components/ExclusiveTourSection';
+import { RentalTourSection } from './components/RentalTourSection';
+import { CafeDeQuintaSection } from './components/CafeDeQuintaSection';
 import { LifestyleSection } from './components/LifestyleSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
@@ -78,13 +81,22 @@ export default function App() {
           onClearCondoFilter={handleClearCondoFilter}
         />
 
-        {/* 5. Seção de Estilo de Vida e Bem-Estar */}
+        {/* 5. Tour em Vídeo Exclusivo (Casa Laguna Porteira Fechada) */}
+        <ExclusiveTourSection />
+
+        {/* 6. Casa de Alto Padrão para Locação */}
+        <RentalTourSection />
+
+        {/* 7. Café de Quinta com Paula Negrão (Episódios & Instagram) */}
+        <CafeDeQuintaSection />
+
+        {/* 6. Seção de Estilo de Vida e Bem-Estar */}
         <LifestyleSection />
 
-        {/* 6. Depoimentos / Prova Social */}
+        {/* 7. Depoimentos / Prova Social */}
         <TestimonialsSection />
 
-        {/* 7. Contato e Agendamento */}
+        {/* 8. Contato e Agendamento */}
         <ContactSection />
       </main>
 

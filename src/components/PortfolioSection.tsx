@@ -157,111 +157,162 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProperties.map((prop) => (
-              <div
-                key={prop.id}
-                onClick={() => onOpenPropertyModal(prop)}
-                className="group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer overflow-hidden"
-              >
-                {/* Image Container */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#1A1A1A]">
-                  <img
-                    src={prop.images[0]}
-                    alt={prop.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div className="space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProperties.map((prop) => (
+                <div
+                  key={prop.id}
+                  onClick={() => onOpenPropertyModal(prop)}
+                  className="group bg-white border border-black/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col cursor-pointer overflow-hidden"
+                >
+                  {/* Image Container */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#1A1A1A]">
+                    <img
+                      src={prop.images[0]}
+                      alt={prop.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
 
-                  {/* Top Badges */}
-                  <div className="absolute top-3.5 left-3.5 flex flex-wrap gap-1.5">
-                    <span className="bg-[#D4AF37] text-white text-[9px] tracking-[0.2em] uppercase font-bold px-2.5 py-1 shadow-sm">
-                      {prop.tag}
-                    </span>
-                    <span className="bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-[9px] tracking-wider px-2 py-1 font-mono">
-                      {prop.code}
-                    </span>
-                  </div>
-
-                  {/* Condominium Chip Bottom */}
-                  <div className="absolute bottom-3 left-3.5 flex items-center gap-1.5 text-white text-xs font-medium">
-                    <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    <span className="drop-shadow-sm">{prop.condominium}</span>
-                  </div>
-                </div>
-
-                {/* Content Card Body */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    {/* Category / Type */}
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-[#8C7326] font-semibold mb-1">
-                      {prop.typeLabel}
+                    {/* Top Badges */}
+                    <div className="absolute top-3.5 left-3.5 flex flex-wrap gap-1.5">
+                      <span className="bg-[#D4AF37] text-white text-[9px] tracking-[0.2em] uppercase font-bold px-2.5 py-1 shadow-sm">
+                        {prop.tag}
+                      </span>
+                      <span className="bg-[#1A1A1A]/80 backdrop-blur-sm text-white text-[9px] tracking-wider px-2 py-1 font-mono">
+                        {prop.code}
+                      </span>
                     </div>
 
-                    {/* Title */}
-                    <h3 className="font-serif text-lg text-[#1A1A1A] group-hover:text-[#8C7326] transition-colors leading-snug mb-2.5">
-                      {prop.title}
-                    </h3>
-
-                    {/* Wellness highlight feature snippet */}
-                    <div className="flex items-center gap-1.5 text-[11px] text-[#5A5550] mb-4 bg-[#FAF8F5] p-2 border-l border-[#D4AF37]">
-                      <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
-                      <span className="truncate">{prop.wellnessHighlights[0]}</span>
+                    {/* Condominium Chip Bottom */}
+                    <div className="absolute bottom-3 left-3.5 flex items-center gap-1.5 text-white text-xs font-medium">
+                      <MapPin className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <span className="drop-shadow-sm">{prop.condominium}</span>
                     </div>
+                  </div>
 
-                    {/* Specs Row */}
-                    <div className="flex items-center gap-4 text-xs text-[#6A6560] pt-3 border-t border-black/5 mb-5">
-                      <div className="flex items-center gap-1">
-                        <Maximize2 className="w-3.5 h-3.5 text-[#8C827A]" />
-                        <span>{prop.area} m²</span>
+                  {/* Content Card Body */}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      {/* Category / Type */}
+                      <div className="text-[10px] uppercase tracking-[0.2em] text-[#8C7326] font-semibold mb-1">
+                        {prop.typeLabel}
                       </div>
 
-                      {prop.bedrooms > 0 && (
+                      {/* Title */}
+                      <h3 className="font-serif text-lg text-[#1A1A1A] group-hover:text-[#8C7326] transition-colors leading-snug mb-2.5">
+                        {prop.title}
+                      </h3>
+
+                      {/* Wellness highlight feature snippet */}
+                      <div className="flex items-center gap-1.5 text-[11px] text-[#5A5550] mb-4 bg-[#FAF8F5] p-2 border-l border-[#D4AF37]">
+                        <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+                        <span className="truncate">{prop.wellnessHighlights[0]}</span>
+                      </div>
+
+                      {/* Specs Row */}
+                      <div className="flex items-center gap-4 text-xs text-[#6A6560] pt-3 border-t border-black/5 mb-5">
                         <div className="flex items-center gap-1">
-                          <BedDouble className="w-3.5 h-3.5 text-[#8C827A]" />
-                          <span>{prop.bedrooms} Q ({prop.suites} S)</span>
+                          <Maximize2 className="w-3.5 h-3.5 text-[#8C827A]" />
+                          <span>{prop.area} m²</span>
                         </div>
-                      )}
 
-                      {prop.parking > 0 && (
-                        <div className="flex items-center gap-1">
-                          <Bath className="w-3.5 h-3.5 text-[#8C827A]" />
-                          <span>{prop.bathrooms} B</span>
-                        </div>
-                      )}
+                        {prop.bedrooms > 0 && (
+                          <div className="flex items-center gap-1">
+                            <BedDouble className="w-3.5 h-3.5 text-[#8C827A]" />
+                            <span>{prop.bedrooms} Q ({prop.suites} S)</span>
+                          </div>
+                        )}
+
+                        {prop.parking > 0 && (
+                          <div className="flex items-center gap-1">
+                            <Bath className="w-3.5 h-3.5 text-[#8C827A]" />
+                            <span>{prop.bathrooms} B</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
+
+                    {/* Price & Action Row */}
+                    <div className="pt-4 border-t border-black/5 flex items-center justify-between">
+                      <div>
+                        <span className="text-[9px] uppercase tracking-wider text-[#7A7570] block">
+                          {prop.purpose === 'Locação' ? 'Diária' : 'Valor'}
+                        </span>
+                        <span className="text-lg font-serif font-semibold text-[#1A1A1A]">
+                          {prop.price}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={(e) => handleWhatsAppQuick(prop, e)}
+                          className="p-2.5 bg-emerald-600 hover:bg-emerald-500 text-white transition-colors shadow-sm"
+                          title="Conversar no WhatsApp sobre este imóvel"
+                          aria-label="WhatsApp"
+                        >
+                          <MessageCircle className="w-4 h-4" />
+                        </button>
+
+                        <span className="p-2.5 bg-[#1A1A1A] text-white group-hover:bg-black transition-colors flex items-center justify-center">
+                          <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </span>
+                      </div>
+                    </div>
+
                   </div>
+                </div>
+              ))}
+            </div>
 
-                  {/* Price & Action Row */}
-                  <div className="pt-4 border-t border-black/5 flex items-center justify-between">
-                    <div>
-                      <span className="text-[9px] uppercase tracking-wider text-[#7A7570] block">
-                        {prop.purpose === 'Locação' ? 'Diária' : 'Valor'}
-                      </span>
-                      <span className="text-lg font-serif font-semibold text-[#1A1A1A]">
-                        {prop.price}
-                      </span>
+            {/* Infinite Rolling Photo Gallery Showcase */}
+            <div className="bg-[#FAF8F5] border border-black/10 py-8 overflow-hidden">
+              <div className="px-6 sm:px-12 mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-[#D4AF37] font-bold block mb-1">
+                    Galeria Imersiva em Rolagem Contínua
+                  </span>
+                  <h3 className="text-2xl font-serif text-[#1A1A1A]">
+                    Explore os Detalhes e Ambientes das Nossas Exclusividades
+                  </h3>
+                </div>
+                <span className="text-xs text-[#7A7570] italic">
+                  Role horizontalmente ou clique para ampliar qualquer foto
+                </span>
+              </div>
+
+              {/* Infinite Marquee Track of Photos */}
+              <div className="relative w-full overflow-hidden flex whitespace-nowrap py-4">
+                <div className="flex gap-4 animate-marquee hover:[animation-play-state:paused]">
+                  {filteredProperties.flatMap(p => p.images).concat(filteredProperties.flatMap(p => p.images)).map((imgUrl, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => {
+                        // Find property containing this image and open modal
+                        const found = filteredProperties.find(p => p.images.includes(imgUrl));
+                        if (found) onOpenPropertyModal(found);
+                      }}
+                      className="w-72 sm:w-80 h-48 sm:h-56 shrink-0 relative overflow-hidden group cursor-pointer border border-black/10 bg-black shadow-md"
+                    >
+                      <img
+                        src={imgUrl}
+                        alt="Ambiente Exclusivo"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                      <div className="absolute bottom-3 left-3 right-3 text-white">
+                        <span className="text-[9px] uppercase tracking-widest text-[#D4AF37] font-bold block mb-0.5">
+                          Paula Negrão Imóveis
+                        </span>
+                        <span className="text-xs font-serif truncate block">
+                          Clique para ver detalhes do imóvel
+                        </span>
+                      </div>
                     </div>
-
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={(e) => handleWhatsAppQuick(prop, e)}
-                        className="p-2.5 bg-[#FAF8F5] hover:bg-[#D4AF37] text-[#1A1A1A] hover:text-white border border-black/10 transition-colors"
-                        title="Conversar no WhatsApp sobre este imóvel"
-                        aria-label="WhatsApp"
-                      >
-                        <MessageCircle className="w-4 h-4" />
-                      </button>
-
-                      <span className="p-2.5 bg-[#1A1A1A] text-white group-hover:bg-black transition-colors flex items-center justify-center">
-                        <ArrowUpRight className="w-4 h-4 text-[#D4AF37] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </span>
-                    </div>
-                  </div>
-
+                  ))}
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         )}
 
