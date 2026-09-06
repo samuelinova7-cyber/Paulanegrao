@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-  const whatsappUrl = "https://wa.me/5582996142244?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%20(Paulinha%20do%20T%C3%ênis)%2C%20gostaria%20de%20conversar%20sobre%20im%C3%B3veis%20de%20alto%20padr%C3%A3o.";
+  const whatsappUrl = "https://wa.me/5582999009222?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20gostaria%20de%20conversar%20sobre%20im%C3%B3veis%20de%20alto%20padr%C3%A3o%20em%20Macei%C3%B3%20e%20no%20Litoral%20Sul.";
 
   // Media items provided by Paula Negrão
   const mediaItems = [
@@ -239,10 +239,10 @@ export const AboutSection: React.FC = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-[#1A1A1A] text-white hover:bg-black px-8 py-4 text-[11px] tracking-[0.2em] uppercase font-semibold transition-all shadow-md hover:shadow-lg border border-[#1A1A1A] hover:border-[#D4AF37]"
+                className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 text-[11px] tracking-[0.2em] uppercase font-bold transition-all shadow-lg hover:shadow-emerald-500/40 animate-pulse hover:animate-none"
               >
-                <MessageCircle className="w-4 h-4 text-[#D4AF37]" />
-                <span>Conversar com a Paulinha do Tênis no WhatsApp</span>
+                <MessageCircle className="w-5 h-5 text-white" />
+                <span>Conversar no WhatsApp com Paula Negrão (+55 82 99900-9222)</span>
               </a>
             </div>
 

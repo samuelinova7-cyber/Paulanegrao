@@ -68,7 +68,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
   const handleWhatsAppQuick = (prop: Property, e: React.MouseEvent) => {
     e.stopPropagation();
     const text = encodeURIComponent(`Olá Paula Negrão, vi o imóvel "${prop.title}" (${prop.code}) no seu site e gostaria de mais detalhes.`);
-    window.open(`https://wa.me/5582996142244?text=${text}`, '_blank');
+    window.open(`https://wa.me/5582999009222?text=${text}`, '_blank');
   };
 
   return (
@@ -331,13 +331,13 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
           </div>
 
           <a
-            href="https://wa.me/5582996142244?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20procuro%20um%20im%C3%B3vel%20espec%C3%ADfico%20na%20Praia%20do%20Franc%C3%AAs%20%2F%20Litoral%20Sul%20e%20gostaria%20de%20consultar%20sua%20carteira%20privada."
+            href="https://wa.me/5582999009222?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20procuro%20um%20im%C3%B3vel%20espec%C3%ADfico%20em%20Macei%C3%B3%2C%20no%20Condom%C3%ADnio%20Laguna%20ou%20Litoral%20Sul%20e%20gostaria%20de%20consultar%20sua%20carteira%20privada."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#D4AF37] text-[#1A1A1A] hover:bg-[#C5A059] px-8 py-4 text-[11px] tracking-[0.2em] uppercase font-bold transition-colors whitespace-nowrap shadow-lg flex items-center gap-2.5"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 text-[11px] tracking-[0.2em] uppercase font-bold transition-all whitespace-nowrap shadow-lg hover:shadow-emerald-500/40 animate-pulse hover:animate-none flex items-center gap-2.5"
           >
-            <MessageCircle className="w-4 h-4" />
-            <span>Consultar Carteira Privada</span>
+            <MessageCircle className="w-5 h-5 text-white" />
+            <span>Consultar Carteira Privada (+55 82 99900-9222)</span>
           </a>
         </div>
 

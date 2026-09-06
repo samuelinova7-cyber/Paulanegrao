@@ -105,12 +105,12 @@ export const LifestyleSection: React.FC = () => {
           </div>
 
           <a
-            href="https://wa.me/5582996142244?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20quero%20conhecer%20mais%20sobre%20o%20estilo%20de%20vida%20e%20im%C3%B3veis%20na%20Praia%20do%20Franc%C3%AAs."
+            href="https://wa.me/5582999009222?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20quero%20conhecer%20mais%20sobre%20o%20estilo%20de%20vida%20e%20im%C3%B3veis%20em%20Macei%C3%B3%20e%20Litoral%20Sul."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#1A1A1A] text-white hover:bg-black px-8 py-4 text-[10px] tracking-[0.2em] uppercase font-semibold transition-all whitespace-nowrap border border-black shadow-md shrink-0"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 text-[10px] tracking-[0.2em] uppercase font-bold transition-all whitespace-nowrap shadow-lg hover:shadow-emerald-500/40 animate-pulse hover:animate-none shrink-0"
           >
-            Conversar com Paula
+            Conversar no WhatsApp (+55 82 99900-9222)
           </a>
         </div>
 

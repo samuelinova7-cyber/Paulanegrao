@@ -26,13 +26,13 @@ export interface Property {
 export const PROPERTIES: Property[] = [
   {
     id: 'prop-laguna-exemplar',
-    title: 'Casa Exclusiva no Condomínio Laguna — Porteira Fechada',
+    title: 'Casa Exclusiva no Condomínio Laguna — Porteira Fechada (580m²)',
     code: 'PN-LAG-01',
     category: 'casas',
     typeLabel: 'Casa de Luxo Porteira Fechada',
     purpose: 'Venda',
     condominium: 'Laguna',
-    location: 'Condomínio Laguna, Praia do Francês / Alagoas',
+    location: 'Condomínio Laguna BRL, Praia do Francês / Marechal Deodoro - AL',
     price: 'R$ 5.300.000',
     priceRaw: 5300000,
     area: 580,
@@ -43,18 +43,22 @@ export const PROPERTIES: Property[] = [
     tag: 'Porteira Fechada • Laguna',
     description: 'Vou te apresentar com exclusividade uma casa linda, espaçosa e construída de uma forma inteligente, onde sobram espaços no local que você realmente usa, que é a varanda, piscina e área gourmet. Toda voltada pro nascente, a ventilação corre solta nas suas 5 suítes (sendo uma master com varanda) e mais 2 quartos extras e escritório. Cozinha integrada com a sala e dependência completa, e no piso superior uma cozinha extra de apoio. A casa será vendida na modalidade porteira fechada, então é só fazer suas malas e mudar! 580m² pra você usufruir e chamar de seu novo lar!',
     wellnessHighlights: [
-      'Modalidade Porteira Fechada (Mobiliada e Equipada)',
-      'Toda voltada para o nascente com excelente ventilação natural',
-      '5 Suítes (sendo 1 master com varanda) + 2 quartos extras + escritório',
-      'Varanda, piscina e área gourmet espetaculares e integradas'
+      'Modalidade Porteira Fechada (100% Mobiliada, Decorada e Equipada)',
+      '100% Voltada para o Nascente — Ventilação Constante e Iluminação Natural',
+      '5 Suítes Completas (Master com Varanda) + 2 Quartos Extras + Escritório Privativo',
+      'Varanda Gourmet Ampla com Piscina e Lounge Integrados'
     ],
     features: [
-      '580 m² de área construída',
-      '5 Suítes completas + 2 quartos extras',
-      'Escritório privativo',
-      'Cozinha integrada + Cozinha de apoio no piso superior',
-      'Dependência completa',
-      'Piscina e área gourmet privativa'
+      '580 m² de área construída inteligente',
+      '5 Suítes amplas (sendo 1 suíte master com varanda privativa)',
+      '2 Quartos extras para hóspedes/família',
+      'Escritório privativo para home office / estudos',
+      'Cozinha principal integrada à sala e área gourmet',
+      'Cozinha extra de apoio no piso superior',
+      'Dependência completa de empregada (DCE)',
+      'Piscina privativa com solário e área gourmet integrada',
+      'Modalidade Porteira Fechada — É só entrar e morar!',
+      'Infraestrutura do Laguna: Marina náutica, heliponto, quadras de tênis saibro e segurança armada 24h'
     ],
     images: [
       'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618090/SnapInsta.to_758356754_18189077896386309_7709103473992109014_n_at2yt0.jpg',
@@ -68,13 +72,13 @@ export const PROPERTIES: Property[] = [
   },
   {
     id: 'prop-granville-exemplar',
-    title: 'Casa À Venda | Granville',
+    title: 'Casa À Venda | Granville (450m² em Terreno de 1.114m²)',
     code: 'PN-GRAN-01',
     category: 'casas',
-    typeLabel: 'Casa de Luxo',
+    typeLabel: 'Mansão de Alto Padrão',
     purpose: 'Venda',
     condominium: 'Granville',
-    location: 'Condomínio Granville, Praia do Francês / Alagoas',
+    location: 'Condomínio Granville, Praia do Francês / Marechal Deodoro - AL',
     price: 'R$ 2.450.000',
     priceRaw: 2450000,
     condoFee: 'R$ 986,37/mês',
@@ -84,18 +88,24 @@ export const PROPERTIES: Property[] = [
     bathrooms: 6,
     parking: 4,
     tag: 'Exclusividade Granville',
-    description: 'Casa à venda no Condomínio Granville com 450 m² de área construída em terreno de 1.114 m². 4 suítes, home office, dependência completa, salas amplas e integradas, piscina com 11,5m x 3m e espaço ideal para viver e receber com conforto. Tudo isso em um dos condomínios mais desejados da região, com excelente estrutura, segurança, lazer e localização privilegiada. Aceita financiamento bancário.',
+    description: 'Casa à venda no Condomínio Granville com 450 m² de área construída em terreno amplo de 1.114 m². 4 suítes, home office, dependência completa, salas amplas e integradas, piscina privativa com 11,5m x 3m e espaço ideal para viver e receber com conforto. Tudo isso em um dos condomínios mais desejados da região, com excelente estrutura, segurança, lazer e localização privilegiada. Aceita financiamento bancário.',
     wellnessHighlights: [
-      'Piscina privativa com 11,5m x 3m',
-      'Home office reservado e silencioso',
-      'Terreno generoso de 1.114 m² com paisagismo',
-      'Salas amplas e integradas para receber com conforto'
+      'Piscina privativa semiolímpica com 11,5m x 3m',
+      'Terreno generoso de 1.114 m² com privacidade e paisagismo',
+      '4 Suítes completas + Home Office silencioso e reservado',
+      'Salas amplas e integradas com múltiplos ambientes e ventilação cruzada'
     ],
     features: [
+      '450 m² de área construída',
+      '1.114 m² de área de terreno privativo',
       '4 Suítes completas',
-      'Home office',
-      'Dependência completa de empregada',
-      'Aceita financiamento bancário'
+      'Home office dedicado',
+      'Dependência completa de empregada (DCE)',
+      'Piscina privativa de 11,5m x 3m com deck',
+      'Salas amplas e integradas em múltiplos ambientes',
+      'Aceita financiamento bancário',
+      'Taxa de condomínio: R$ 986,37/mês',
+      'Segurança armada e portaria blindada 24h no Granville'
     ],
     images: [
       'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618076/SnapInsta.to_788172183_18192296329386309_8859033092567156432_n_zrcjie.jpg',

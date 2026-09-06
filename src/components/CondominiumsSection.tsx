@@ -35,8 +35,8 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
   };
 
   const handleWhatsAppCondo = (condoName: string) => {
-    const text = encodeURIComponent(`Olá Paula Negrão, tenho interesse em conhecer os imóveis e lotes disponíveis no ${condoName}. Poderia me enviar mais informações?`);
-    window.open(`https://wa.me/5582996142244?text=${text}`, '_blank');
+    const text = encodeURIComponent(`Olá Paula Negrão, tenho interesse em conhecer os imóveis e lotes disponíveis no ${condoName} em Maceió / Litoral Sul. Poderia me enviar mais informações?`);
+    window.open(`https://wa.me/5582999009222?text=${text}`, '_blank');
   };
 
   return (
@@ -246,9 +246,9 @@ export const CondominiumsSection: React.FC<CondominiumsSectionProps> = ({ onSele
 
               <button
                 onClick={() => handleWhatsAppCondo(selectedCondo.name)}
-                className="border border-[#D4AF37] text-[#8C7326] hover:bg-[#D4AF37] hover:text-white py-3 px-4 text-[10px] tracking-[0.2em] uppercase font-semibold text-center transition-all flex items-center justify-center gap-2"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white py-3 px-4 text-[10px] tracking-[0.2em] uppercase font-bold text-center transition-all shadow-md flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-3.5 h-3.5" />
+                <MessageCircle className="w-3.5 h-3.5 text-white" />
                 <span>Conversar no WhatsApp</span>
               </button>
             </div>

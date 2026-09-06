@@ -48,7 +48,7 @@ export const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose 
   const whatsappMessage = encodeURIComponent(
     `Olá Paula Negrão! Gostaria de receber mais informações e agendar uma visita para o imóvel ${property.title} (Código: ${property.code}) no valor de ${property.price}.`
   );
-  const whatsappUrl = `https://wa.me/5582996142244?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/5582999009222?text=${whatsappMessage}`;
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 animate-fadeIn">
@@ -270,10 +270,10 @@ export const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#D4AF37] text-[#1A1A1A] hover:bg-[#c49f2e] px-6 py-3 text-[10px] tracking-[0.2em] uppercase font-bold transition-colors flex items-center justify-center gap-2 shadow-lg"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 text-[10px] tracking-[0.2em] uppercase font-bold transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-emerald-500/40 animate-pulse hover:animate-none"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Agendar Visita no WhatsApp</span>
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span>Falar no WhatsApp (+55 82 99900-9222)</span>
               </a>
             </div>
           </div>

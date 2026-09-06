@@ -20,58 +20,66 @@ export interface Condominium {
 export const CONDOMINIUMS: Condominium[] = [
   {
     id: 'laguna',
-    name: 'Condomínio Laguna BRL',
-    subtitle: 'O maior e mais sofisticado complexo náutico e residencial fechado de Alagoas',
-    highlightBadge: 'Referência & Alta Expertise',
-    description: 'O Condomínio Laguna é a grande referência de alto padrão do Litoral Sul alagoano. Situado às margens da Lagoa Manguaba e a poucos minutos da Praia do Francês, oferece aos seus moradores uma marina exclusiva com vaga molhada, heliponto homologado, complexo esportivo internacional e segurança armada rigorosa 24 horas.',
-    keyExpertise: 'Paula Negrão possui histórico consolidado de negociações no Laguna, com acesso direto aos melhores lotes na fase náutica e mansões de alto luxo com píer privativo.',
-    location: 'Marechal Deodoro / Praia do Francês, Alagoas',
+    name: 'Casa Exclusiva | Laguna (580m²)',
+    subtitle: 'Residência inteligente de 580m² em Porteira Fechada com 5 suítes + 2 quartos',
+    highlightBadge: 'Casa Exclusiva Porteira Fechada',
+    description: 'O Condomínio Laguna é a grande referência de alto padrão do Litoral Sul alagoano. Destacamos com exclusividade esta residência de 580m² de área construída em modalidade porteira fechada (totalmente mobiliada e decorada), 100% voltada para o nascente com ventilação constante, 5 suítes (master com varanda privativa), mais 2 quartos extras, escritório, cozinha gourmet integrada com a sala, cozinha de apoio superior, varandão e piscina privativa.',
+    keyExpertise: 'Paula Negrão apresenta com exclusividade esta mansão porteira fechada no Laguna, pronta para morar com sofisticação absoluta e acesso à infraestrutura náutica completa do condomínio.',
+    location: 'Condomínio Laguna BRL, Praia do Francês / Marechal Deodoro - AL',
     distanceFrances: '5 min da Praia do Francês',
     distanceMaceio: '18 min de Maceió',
     amenities: [
-      'Marina privativa com rampa náutica e píer',
-      'Heliponto privativo com operação diurna/noturna',
-      'Complexo de tênis (saibro) e beach tennis',
-      'Piscina club resort com borda infinita sobre a lagoa',
-      'Academia climatizada de última geração com instrutores',
-      'Segurança armada 24h, circuito CFTV e controle biométrico'
+      'Modalidade Porteira Fechada (Mobiliada e Equipada)',
+      '5 Suítes completas (Master com varanda) + 2 quartos extras',
+      'Escritório privativo + Cozinha de apoio no piso superior',
+      'Varanda gourmet ampla e piscina privativa integradas',
+      '100% voltada para o nascente com ventilação abundante',
+      'Marina náutica, heliponto, tênis saibro e segurança 24h no condomínio'
     ],
     specs: [
-      { label: 'Perfil dos Lotes', value: '500m² a 1.500m²' },
-      { label: 'Estilo Arquitetônico', value: 'Contemporâneo Tropical & Neoclássico' },
-      { label: 'Segurança', value: 'Portaria Blindada + Ronda Náutica e Terrestre 24h' },
-      { label: 'Atividades', value: 'Stand-up Paddle, Wakeboard, Jetski, Vela, Tênis' }
+      { label: 'Área Construída', value: '580 m²' },
+      { label: 'Dormitórios', value: '7 Quartos (5 Suítes + 2 Quartos)' },
+      { label: 'Posição Solar', value: '100% Nascente (Ventilação Solta)' },
+      { label: 'Modalidade', value: 'Porteira Fechada (Só fazer as malas)' },
+      { label: 'Investimento', value: 'R$ 5.300.000,00' },
+      { label: 'Estrutura Extra', value: 'Escritório + Cozinha Apoio Superior' }
     ],
-    heroImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop',
+    heroImage: 'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618090/SnapInsta.to_758356754_18189077896386309_7709103473992109014_n_at2yt0.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop'
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618087/SnapInsta.to_756045877_18189077926386309_2661356699570487785_n_yju97t.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618085/SnapInsta.to_755948743_18189077944386309_7800324389826297667_n_i91mqe.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618083/SnapInsta.to_755878651_18189077917386309_2909251373878265836_n_re2vdb.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618080/SnapInsta.to_759547573_18189077908386309_829456923748175792_n_c9zdhp.jpg',
+      'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618078/SnapInsta.to_758543643_18189077941386309_2658219926359549986_n_s6og4r.jpg'
     ]
   },
   {
     id: 'granville',
-    name: 'Casa À Venda | Granville',
-    subtitle: 'Exclusividade e sofisticação em um dos condomínios mais desejados da região',
+    name: 'Casa À Venda | Granville (450m²)',
+    subtitle: 'Mansão de 450m² construída em terreno de 1.114m² com 4 suítes e piscina de 11,5m',
     highlightBadge: 'Destaque Exclusivo Granville',
-    description: 'Casa à venda no Condomínio Granville com 450 m² de área construída em terreno de 1.114 m². 4 suítes, home office, dependência completa, salas amplas e integradas, piscina com 11,5m x 3m e espaço ideal para viver e receber com conforto. Tudo isso em um condomínio com excelente estrutura, segurança, lazer e localização privilegiada.',
-    keyExpertise: 'Paula Negrão destaca esta mansão como uma das melhores oportunidades para quem valoriza espaço, exclusividade e a experiência de morar bem no Granville.',
+    description: 'Casa à venda no Condomínio Granville com 450 m² de área construída implantada em um generoso terreno de 1.114 m². Composta por 4 suítes completas, home office dedicado, dependência completa de empregada, salas amplas integradas com múltiplos ambientes e uma deslumbrante piscina privativa de 11,5m x 3m. Excelente infraestrutura de condomínio fechado com segurança armada 24h, lazer e localização nobre na Praia do Francês. Aceita financiamento bancário.',
+    keyExpertise: 'Paula Negrão destaca esta mansão como a escolha perfeita para quem busca terreno amplo de mais de 1.100m², privacidade, piscina semiolímpica e acabamento de alto padrão no Granville.',
     location: 'Condomínio Granville, Praia do Francês, Alagoas',
     distanceFrances: '3 min da Praia do Francês',
     distanceMaceio: '20 min de Maceió',
     amenities: [
-      'Piscina privativa com 11,5m x 3m',
-      'Home office reservado e silencioso',
-      'Dependência completa de empregada',
-      'Salas amplas e integradas em múltiplos ambientes',
-      'Terreno generoso de 1.114 m² com paisagismo',
-      'Segurança armada 24h e portaria blindada'
+      'Piscina privativa semiolímpica com 11,5m x 3m',
+      'Terreno generoso de 1.114 m² com paisagismo exuberante',
+      '4 Suítes completas com excelente iluminação e ventilação',
+      'Home office reservado e silencioso para trabalho/estudos',
+      'Dependência completa de empregada (DCE)',
+      'Salas amplas com pé-direito imponente integradas à área externa',
+      'Aceita financiamento bancário',
+      'Segurança armada 24h com portaria e controle rigoroso'
     ],
     specs: [
       { label: 'Área Construída', value: '450 m²' },
-      { label: 'Terreno', value: '1.114 m²' },
-      { label: 'Suítes', value: '4 Suítes completas' },
-      { label: 'Investimento', value: 'R$ 2.450.000,00 (Condomínio: R$ 986,37)' }
+      { label: 'Área do Terreno', value: '1.114 m²' },
+      { label: 'Dormitórios', value: '4 Suítes completas' },
+      { label: 'Piscina Privativa', value: '11,5m x 3m' },
+      { label: 'Home Office & DCE', value: 'Escritório + Dependência Completa' },
+      { label: 'Investimento', value: 'R$ 2.450.000,00 (Condomínio: R$ 986,37/mês)' }
     ],
     heroImage: 'https://res.cloudinary.com/ddfacd0wf/image/upload/v1788618076/SnapInsta.to_788172183_18192296329386309_8859033092567156432_n_zrcjie.jpg',
     gallery: [
@@ -88,25 +96,25 @@ export const CONDOMINIUMS: Condominium[] = [
   {
     id: 'atlantis',
     name: 'Condomínio Atlantis',
-    subtitle: 'Exclusividade beira-mar com o privilégio da brisa eterna do oceano',
-    highlightBadge: 'Pé na Areia & Alto Luxo',
-    description: 'Projetado para quem não abre mão de acordar com o som das ondas e a vista para o mar azul-turquesa inconfundível de Alagoas. O Atlantis une a máxima privacidade de um condomínio fechado com acesso direto às areias douradas e piscinas de coral do Francês.',
-    keyExpertise: 'Portfólio confidencial de mansões frente mar e oportunidades exclusivas de investimento com altíssima valorização patrimonial.',
-    location: 'Orla Nobre, Praia do Francês, Alagoas',
-    distanceFrances: 'Pé na areia (0 min da praia)',
-    distanceMaceio: '22 min de Maceió',
+    subtitle: 'Condomínio fechado exclusivo e arborizado na Praia do Francês',
+    highlightBadge: 'Condomínio Fechado',
+    description: 'O Condomínio Atlantis é um dos mais tradicionais e procurados condomínios fechados da Praia do Francês. Oferece ruas pavimentadas e tranquilas, portaria com controle de acesso rigoroso 24 horas, excelente integração com a natureza local e proximidade estratégica com o comércio, serviços e a praia.',
+    keyExpertise: 'Paula Negrão atua com residências de alto padrão e lotes exclusivos no Condomínio Atlantis com atendimento personalizado e seguro.',
+    location: 'Praia do Francês, Marechal Deodoro - AL',
+    distanceFrances: 'A poucos minutos da orla da Praia do Francês',
+    distanceMaceio: '20 min de Maceió',
     amenities: [
-      'Acesso privativo e seguro direto à praia',
-      'Deck lounge beira-mar com serviços de praia exclusivos',
-      'Piscina infinita com vista panorâmica da costa',
-      'Spa relaxante com salas de massagem e sauna',
-      'Monitoramento 24h de ponta com equipe especializada'
+      'Portaria 24 horas com controle de acesso e monitoramento',
+      'Ruas arborizadas, tranquilas e seguras para caminhada',
+      'Excelente padrão construtivo das residências',
+      'Área verde preservada e praça de convivência',
+      'A poucos minutos de restaurantes e da praia'
     ],
     specs: [
-      { label: 'Perfil dos Imóveis', value: 'Mansões de 400m² a 900m²' },
-      { label: 'Estilo Arquitetônico', value: 'Modernismo Tropical com grandes panos de vidro' },
-      { label: 'Segurança', value: 'Vigilância 24h na praia e vias internas' },
-      { label: 'Localização', value: 'Trecho mais preservado e nobre da costa' }
+      { label: 'Perfil dos Imóveis', value: 'Casas e Lotes Residenciais' },
+      { label: 'Localização', value: 'Região Nobre da Praia do Francês' },
+      { label: 'Segurança', value: 'Portaria 24h + Vigilância' },
+      { label: 'Acesso', value: 'Fácil acesso à rodovia AL-101 Sul' }
     ],
     heroImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop',
     gallery: [

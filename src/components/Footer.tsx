@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const whatsappUrl = "https://wa.me/5582996142244?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20visitei%20seu%20site%20e%20gostaria%20de%20conversar.";
+  const whatsappUrl = "https://wa.me/5582999009222?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20visitei%20seu%20site%20e%20gostaria%20de%20um%20atendimento%20exclusivo.";
 
   return (
     <footer className="bg-[#1A1A1A] text-white border-t border-black/10">
@@ -41,19 +41,32 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate }) => {
             </div>
             
             <p className="text-xs text-white/70 font-light leading-relaxed">
-              Especialista em imóveis de luxo, casas de alto padrão e terrenos em condomínios fechados na Praia do Francês e Litoral Sul de Alagoas.
+              Especialista em imóveis de alto padrão e atendimento exclusivo em Maceió e no Litoral Sul de Alagoas, com forte referência no Condomínio Laguna e na Praia do Francês.
             </p>
 
             <div className="pt-2 flex items-center gap-2 text-xs text-[#D4AF37]">
               <Award className="w-4 h-4" />
               <span className="font-serif">CRECI-AL 5494 • Registro Oficial</span>
             </div>
+
+            {/* Bright WhatsApp Button in Footer */}
+            <div className="pt-2">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-3 text-[10px] tracking-[0.2em] uppercase font-bold shadow-lg hover:shadow-emerald-500/30 transition-all animate-pulse hover:animate-none"
+              >
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span>WhatsApp: (82) 99900-9222</span>
+              </a>
+            </div>
           </div>
 
           {/* Direct Channels Column */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37] font-semibold mb-4">
-              Canais Diretos
+              Canais Oficiais
             </h4>
             <ul className="space-y-3 text-xs text-white/80 font-light">
               <li>
@@ -61,35 +74,37 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate }) => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#D4AF37] transition-colors flex items-center gap-2.5"
+                  className="text-emerald-400 font-semibold hover:text-emerald-300 transition-colors flex items-center gap-2.5"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>WhatsApp: (82) 99614-2244</span>
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>WhatsApp: (82) 99900-9222</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contato@paulanegraoimoveis.com.br"
-                  className="hover:text-[#D4AF37] transition-colors flex items-center gap-2.5"
-                >
-                  <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span className="break-all">contato@paulanegraoimoveis.com.br</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/paulanegraoinoveis"
+                  href="https://www.instagram.com/paulanegraoimoveis"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#D4AF37] transition-colors flex items-center gap-2.5"
                 >
                   <Instagram className="w-3.5 h-3.5 text-[#D4AF37]" />
-                  <span>Instagram: @paulanegraoinoveis</span>
+                  <span>Instagram: @paulanegraoimoveis</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linktr.ee/imoveispaulanegrao"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#D4AF37] transition-colors flex items-center gap-2.5"
+                >
+                  <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Linktree: linktr.ee/imoveispaulanegrao</span>
                 </a>
               </li>
               <li className="flex items-start gap-2.5 text-white/60 text-[11px] pt-1">
                 <MapPin className="w-3.5 h-3.5 text-[#D4AF37] shrink-0 mt-0.5" />
-                <span>Praia do Francês, Marechal Deodoro & Maceió - AL</span>
+                <span>Maceió, Praia do Francês, Marechal Deodoro & Condomínio Laguna (AL)</span>
               </li>
             </ul>
           </div>
@@ -191,8 +206,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal, onNavigate }) => {
           <div>
             © {new Date().getFullYear()} Paula Negrão — Todos os Direitos Reservados
           </div>
-          <div className="flex items-center gap-6">
-            <span>Instagram: @paulanegraoinoveis</span>
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <span>Instagram: @paulanegraoimoveis</span>
+            <span className="text-emerald-400 font-medium">WhatsApp: (82) 99900-9222</span>
             <span className="text-[#D4AF37] font-semibold">CRECI-AL 5494</span>
           </div>
         </div>

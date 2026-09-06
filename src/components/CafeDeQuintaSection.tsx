@@ -78,7 +78,7 @@ export const CafeDeQuintaSection: React.FC = () => {
                   </span>
 
                   <a
-                    href="https://www.instagram.com/paulalnegrao/"
+                    href="https://www.instagram.com/paulanegraoimoveis/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 text-[10px] tracking-widest uppercase font-bold transition-colors flex items-center gap-2 shadow-md"
@@ -100,18 +100,18 @@ export const CafeDeQuintaSection: React.FC = () => {
             </div>
             <div>
               <h4 className="text-lg font-serif text-white mb-1">Não perca nenhum episódio do Café de Quinta!</h4>
-              <p className="text-xs text-white/70">Siga @paulalnegrao no Instagram para acompanhar tours exclusivos em tempo real.</p>
+              <p className="text-xs text-white/70">Siga @paulanegraoimoveis no Instagram para acompanhar tours exclusivos em tempo real.</p>
             </div>
           </div>
 
           <a
-            href="https://www.instagram.com/paulalnegrao/"
+            href="https://www.instagram.com/paulanegraoimoveis/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 text-[11px] tracking-[0.2em] uppercase font-bold transition-all shadow-xl flex items-center gap-2.5 shrink-0"
           >
             <Instagram className="w-4 h-4" />
-            <span>Seguir @paulalnegrao</span>
+            <span>Seguir @paulanegraoimoveis</span>
             <ExternalLink className="w-3.5 h-3.5 ml-1" />
           </a>
         </div>

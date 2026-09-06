@@ -28,7 +28,7 @@ export const ContactSection: React.FC = () => {
     // Construct WhatsApp pre-formatted message
     const msg = `Olá Paula Negrão! Mensagem enviada pelo site:\n\n*Nome:* ${formData.name}\n*Telefone:* ${formData.phone}\n*E-mail:* ${formData.email}\n*Interesse:* ${formData.interest}\n*Condomínio:* ${formData.condominium}\n*Mensagem:* ${formData.message || 'Gostaria de um atendimento personalizado.'}`;
     
-    const whatsappUrl = `https://wa.me/5582996142244?text=${encodeURIComponent(msg)}`;
+    const whatsappUrl = `https://wa.me/5582999009222?text=${encodeURIComponent(msg)}`;
     window.open(whatsappUrl, '_blank');
 
     setSubmitted(true);
@@ -88,52 +88,54 @@ export const ContactSection: React.FC = () => {
               <div className="space-y-5">
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/5582996142244?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20gostaria%20de%20um%20atendimento%20personalizado."
+                  href="https://wa.me/5582999009222?text=Ol%C3%A1%20Paula%20Negr%C3%A3o%2C%20gostaria%20de%20um%20atendimento%20personalizado."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-3 bg-emerald-50/50 hover:bg-emerald-50 transition-colors border border-emerald-200 group"
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-md">
+                    <MessageCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase tracking-wider text-emerald-800 font-bold block">
+                      WhatsApp Direto (Oficial)
+                    </span>
+                    <span className="text-sm font-bold text-[#1A1A1A]">
+                      +55 (82) 99900-9222
+                    </span>
+                    <span className="text-[10px] text-emerald-700 block font-medium">Atendimento Imediato & Agendamento</span>
+                  </div>
+                </a>
+
+                {/* Linktree */}
+                <a
+                  href="https://linktr.ee/imoveispaulanegrao"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-3 hover:bg-white transition-colors border border-transparent hover:border-black/5 group"
                 >
                   <div className="w-10 h-10 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37] group-hover:text-[#1A1A1A] transition-colors">
-                    <MessageCircle className="w-4 h-4" />
+                    <Sparkles className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-[#7A7570] block">
-                      WhatsApp Direto
+                      Linktree Oficial
                     </span>
                     <span className="text-sm font-semibold text-[#1A1A1A]">
-                      (82) 99614-2244
+                      linktr.ee/imoveispaulanegrao
                     </span>
-                    <span className="text-[10px] text-[#8C7326] block">Atendimento Imediato & Concierge</span>
-                  </div>
-                </a>
-
-                {/* E-mail */}
-                <a
-                  href="mailto:contato@paulanegraoimoveis.com.br"
-                  className="flex items-start gap-4 p-3 hover:bg-white transition-colors border border-transparent hover:border-black/5 group"
-                >
-                  <div className="w-10 h-10 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37] group-hover:text-[#1A1A1A] transition-colors">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#7A7570] block">
-                      E-mail Profissional
-                    </span>
-                    <span className="text-sm font-semibold text-[#1A1A1A] break-all">
-                      contato@paulanegraoimoveis.com.br
-                    </span>
-                    <span className="text-[10px] text-[#7A7570] block">Envio de propostas e relatórios</span>
+                    <span className="text-[10px] text-[#8C7326] block">Acesse todos os canais e materiais</span>
                   </div>
                 </a>
 
                 {/* Instagram */}
                 <a
-                  href="https://www.instagram.com/paulanegraoinoveis"
+                  href="https://www.instagram.com/paulanegraoimoveis"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-3 hover:bg-white transition-colors border border-transparent hover:border-black/5 group"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#1A1A1A] text-white flex items-center justify-center shrink-0 group-hover:bg-[#D4AF37] group-hover:text-[#1A1A1A] transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#833AB4] via-[#FD1D1D] to-[#F77737] text-white flex items-center justify-center shrink-0 shadow">
                     <Instagram className="w-4 h-4" />
                   </div>
                   <div>
@@ -141,9 +143,9 @@ export const ContactSection: React.FC = () => {
                       Instagram Oficial
                     </span>
                     <span className="text-sm font-semibold text-[#1A1A1A]">
-                      @paulanegraoinoveis
+                      @paulanegraoimoveis
                     </span>
-                    <span className="text-[10px] text-[#7A7570] block">Vídeos de imóveis & lifestyle</span>
+                    <span className="text-[10px] text-[#7A7570] block">Vídeos, reels de imóveis & lifestyle</span>
                   </div>
                 </a>
 
@@ -154,10 +156,10 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-[#7A7570] block">
-                      Região de Atendimento
+                      Região de Atuação
                     </span>
                     <span className="text-xs font-medium text-[#1A1A1A]">
-                      Praia do Francês, Marechal Deodoro, Litoral Sul e Maceió — AL
+                      Maceió, Litoral Sul de Alagoas (Praia do Francês, Condomínio Laguna, Granville e Atlantis)
                     </span>
                   </div>
                 </div>
@@ -293,10 +295,10 @@ export const ContactSection: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#1A1A1A] text-white hover:bg-black py-4 px-6 text-[11px] tracking-[0.2em] uppercase font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-black shadow-md hover:shadow-lg"
+                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white py-4 px-6 text-[11px] tracking-[0.2em] uppercase font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-emerald-500/40 animate-pulse hover:animate-none"
                 >
-                  <Send className="w-4 h-4 text-[#D4AF37]" />
-                  <span>Enviar & Falar no WhatsApp</span>
+                  <MessageCircle className="w-4 h-4 text-white" />
+                  <span>Enviar & Falar no WhatsApp (+55 82 99900-9222)</span>
                 </button>
               </form>
             )}
